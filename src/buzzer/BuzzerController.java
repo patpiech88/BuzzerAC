@@ -1,3 +1,5 @@
+//Copyright P.W.
+
 package buzzer;
 
 import java.io.IOException;
