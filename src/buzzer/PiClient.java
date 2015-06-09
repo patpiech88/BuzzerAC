@@ -6,6 +6,7 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
 
 public class PiClient implements Runnable {
 
@@ -28,8 +29,10 @@ public class PiClient implements Runnable {
 
 
 	public void run() {
-		System.out.println("Starte Thread");
 		try {
+			System.out.print("Bitte IP-Adresse eingeben:");
+			Scanner s = new Scanner(System.in);
+			setServername(s.next());
 			socket = new Socket(getServername(), getPort());
 		} 
 		catch(Exception ec) {
